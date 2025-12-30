@@ -12,7 +12,7 @@ services:
     cap_add:
       - SYS_ADMIN
     volumes:
-      - "/mnt/stor/ssd-lv/volumes/anyllm/env:/app/server/.env"
+      - ".env:/app/server/.env"
       - "/mnt/stor/ssd-lv/volumes/anyllm/storage:/app/server/storage"
       - "/mnt/stor/ssd-lv/volumes/anyllm/collector/hotdir/:/app/collector/hotdir"
       - "/mnt/stor/ssd-lv/volumes/anyllm/collector/outputs/:/app/collector/outputs"
@@ -20,7 +20,7 @@ services:
     ports:
       - "3001:3001"
     env_file:
-      - "/mnt/stor/ssd-lv/volumes/anyllm/env"
+      - .env
       #extra hosts it a trick to perform abiliuty of communication btw cont and host
     #extra_hosts:
     #  - "host.docker.internal:host-gateway"
