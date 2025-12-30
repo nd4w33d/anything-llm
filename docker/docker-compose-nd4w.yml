@@ -13,9 +13,9 @@ services:
       - SYS_ADMIN
     volumes:
 #      - "./env:/app/server/.env"
-      - "/mnt/stor/ssd-lv/volumes/anyllm/storage:/app/server/storage"
-      - "/mnt/stor/ssd-lv/volumes/anyllm/collector/hotdir/:/app/collector/hotdir"
-      - "/mnt/stor/ssd-lv/volumes/anyllm/collector/outputs/:/app/collector/outputs"
+      - "/mnt/stor/ssd-lv/volumes/anything-llm/storage:/app/server/storage"
+      - "/mnt/stor/ssd-lv/volumes/anything-llm/collector/hotdir/:/app/collector/hotdir"
+      - "/mnt/stor/ssd-lv/volumes/anything-llm/collector/outputs/:/app/collector/outputs"
     user: "${UID:-1000}:${GID:-1000}"
     ports:
       - "3001:3001"
