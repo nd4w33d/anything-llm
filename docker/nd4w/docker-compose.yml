@@ -4,7 +4,7 @@ services:
   anything-llm:
     container_name: anything-llm
     build:
-      context: ../.
+      context: ../../.
       dockerfile: ./docker/Dockerfile
       args:
         ARG_UID: ${UID:-1000}
