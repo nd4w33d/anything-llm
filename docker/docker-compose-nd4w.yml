@@ -12,7 +12,7 @@ services:
     cap_add:
       - SYS_ADMIN
     volumes:
-#      - "./env:/app/server/.env"
+      - "/mnt/stor/ssd-lv/volumes/anything-llm/.env:/app/server/.env"
       - "/mnt/stor/ssd-lv/volumes/anything-llm/storage:/app/server/storage"
       - "/mnt/stor/ssd-lv/volumes/anything-llm/collector/hotdir/:/app/collector/hotdir"
       - "/mnt/stor/ssd-lv/volumes/anything-llm/collector/outputs/:/app/collector/outputs"
